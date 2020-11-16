@@ -1,7 +1,4 @@
-import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.Disabled;
-import org.junit.jupiter.api.DisplayName;
-import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.*;
 import org.junit.runners.Parameterized;
 import org.w3c.dom.ls.LSOutput;
 
@@ -13,6 +10,11 @@ public class CalculatorTest {
     @BeforeEach
     void beforeEach (){
         System.out.println("Körs före varje test");
+    }
+
+    @RepeatedTest(10)
+    void testTrue(){
+        assertTrue(0 < 5);
     }
 
     @Test
